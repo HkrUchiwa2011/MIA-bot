@@ -26,7 +26,7 @@ module.exports = {
 			session2: "noon",
 			session3: "afternoon",
 			session4: "evening",
-			welcomeMessage: "Je peux savoir qui est l/'imbécile qui m/'a ajouté dans ce groupe. Mais bon Merci 🥲!\nBot prefix: %1\nTu veux m/utiliser à ta guise et pour voir la liste de mes commandes tape: %1help",
+			welcomeMessage: "Je peux savoir qui est l'imbécile qui m'a ajouté dans ce groupe. Mais bon Merci 🥲!\nBot prefix: %1\nTu veux m/utiliser à ta guise et pour voir la liste de mes commandes tape: %1help",
 			multiple1: "you",
 			multiple2: "you guys",
 			defaultWelcomeMessage: `Salut le con. Comment il s'appelle déjà ? 🤔 Ah voilà\n{userName}.\nMauvaise venue {multiple} dans ce groupe de nul :{boxName}\nBienvenue en enfer 😈`
