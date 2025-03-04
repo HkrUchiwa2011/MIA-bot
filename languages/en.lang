@@ -89,20 +89,20 @@ handlerCheckData.cantCreateThread=Groups with id '%1' cannot be written to the d
 handlerCheckData.cantCreateUser=Users with id '%1' cannot be written to the database!
 
 # bot/handler/handlerEvents.js
-handlerEvents.userBanned=You have been banned from using the bot\n» Reason: %1\n» Time: %2\n» User ID: %3
-handlerEvents.threadBanned=This group has been banned from using the bot\n» Reason: %1\n» Time: %2\n» Thread ID: %3
+handlerEvents.userBanned=Oh man 🥺 Désolé tu as été banni du bot 🤧. Bref vas manger des insectes 🚶\n» Voilà pourquoi tu as été banni: %1\n» Time: %2\n» User ID: %3
+handlerEvents.threadBanned=Réessayer plus tard. Ce groupe a été banni\n» Reason: %1\n» Time: %2\n» Thread ID: %3
 handlerEvents.onlyAdminBox=This group is currently enabled only group administrators can use the bot
-handlerEvents.onlyAdminBot=❌ | Currently only bot's admin can use bot
-handlerEvents.commandNotFound=Command "%1" does not exist, type %2help to see all available commands
-handlerEvents.commandNotFound2=The command you are using does not exist, type %1help to see all available commands
+handlerEvents.onlyAdminBot=❌ | Qu'est-ce-que ? Minable t'as pas compris que seul mon maître peut m'utiliser ?
+handlerEvents.commandNotFound=               \n.   /)    /)───────◆\n.  (｡•ㅅ•｡)  ━╬٨ـﮩ𝕌𝕔𝕙𝕚𝕨𝕒𝕓𝕠𝕥ﮩ❤٨ـﮩﮩـ╬━\n╭∪─∪───────◆\n╰🤦 | Sérieusement ? Man 🤦. La commande "%1" ? Tu l'as inventé dans tes rêves ou quoi ? \nTape /help avant de commencer par faire du n'importe quoi 
+handlerEvents.commandNotFound2= ˚۰˚/)𓈊/)তততততততততততত\n. .   (｡•ㅅ•｡)〝₎₎⤹⋆⸙͎۪۫｡˚Ⰶ⁀➷｡˚\n. .╭∪─∪ ─ ─ ─ ─ ─✦𖠌\n. .┊･ﾟ: *★ •𝙊𝙒𝙉𝙀𝙍• ✧･ﾟ: *\n. .├ ─ ─ ─ ─ ─ ─ ─ ─✧ \n. .┊✦₊𝐔𝐜𝐡𝐢𝐰𝐚 𝐏𝐞𝐫𝐝𝐮ʕ˖͜͡˖ʔ༂₊ˊ˗˚\n. .╰─ ─ ─ ─ ─ ─ ─ ─ ✦\n⧣₊˚﹒✦₊ ⧣₊˚𓂃༲࿆༫࿆࿂࿆༗⸝⸝ ⧣₊˚ˊ˗˚✧₊\n▬▬▬▬▬▬▬▬▬▬▬▬\nhttps://www.facebook.com/l.uchiha.perdu.2024
 handlerEvents.commandSyntaxError=The command you are using is wrong syntax, please type %1help %2 to see the details of how to use this command
-handlerEvents.onlyAdmin=❌ | Only group administrators can use the command "%1"
+handlerEvents.onlyAdmin=🤦 | Oh que c'est mignon. Ducon , seul les minables qui sont en tête dans ce groupe peuvent utiliser la commande : "%1"
 handlerEvents.onlyAdminToUseOnReply=❌ | Only group administrators can use the reply function of the command "%1"
 handlerEvents.onlyAdminToUseOnReaction=❌ | Only group administrators can use the reaction function of the command "%1"
 handlerEvents.onlyAdminBot2=❌ | Only bot's admin can use the command "%1"
 handlerEvents.onlyAdminBot2ToUseOnReply=❌ | Only bot's admin can use the reply function of the command "%1"
 handlerEvents.onlyAdminBot2ToUseOnReaction=❌ | Only bot's admin can use the reaction function of the command "%1"
-handlerEvents.waitingForCommand=⏱ You are in the waiting time to use this command, please come back after %1s
+handlerEvents.waitingForCommand=                "\n.   /)    /)───────◆\n.  (｡•ㅅ•｡)  ━╬٨ـﮩ𝕌𝕔𝕙𝕚𝕨𝕒𝕓𝕠𝕥ﮩ❤٨ـﮩﮩـ╬━\n╭∪─∪───────◆\n╰⏳ | Imbécile si tu continues à utiliser les commandes de cette façon, mon système ira en fumée. Réessayes %1s plus tard. Enflure 🙂
 handlerEvents.errorOccurred=❌ [ %1 ]\nAn error occurred at command "%2"\n\n%3
 handlerEvents.errorOccurred2=❌ [ %1 ]\nAn error occurred at command onChat in command "%2"\n\n%3
 handlerEvents.errorOccurred3=❌ [ %1 ]\nAn error occurred when executing onReply at command "%2"\n\n%3
