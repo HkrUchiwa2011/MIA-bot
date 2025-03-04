@@ -10,11 +10,11 @@ module.exports = {
 		role: 2,
 		description: {
 			vi: "Gửi thông báo từ admin đến all box",
-			en: "Send notification from admin to all box"
+			fr: "Envoyer une notification de l'admin à toutes les conversations"
 		},
 		category: "owner",
 		guide: {
-			en: "{pn} <tin nhắn>"
+			fr: "{pn} <message>"
 		},
 		envConfig: {
 			delayPerGroup: 250
@@ -29,21 +29,22 @@ module.exports = {
 			sentNotification: "✅ Đã gửi thông báo đến %1 nhóm thành công",
 			errorSendingNotification: "Có lỗi xảy ra khi gửi đến %1 nhóm:\n%2"
 		},
-		en: {
-			missingMessage: "Please enter the message you want to send to all groups",
-			notification: "Notification from admin bot to all chat groups (do not reply to this message)",
-			sendingNotification: "Start sending notification from admin bot to %1 chat groups",
-			sentNotification: "✅ Sent notification to %1 groups successfully",
-			errorSendingNotification: "An error occurred while sending to %1 groups:\n%2"
+		fr: {
+			missingMessage: "Veuillez entrer le message que vous souhaitez envoyer à tous les groupes.",
+			notification: "📢 **Notification de l'admin**\n────────────────\n_(Ne répondez pas à ce message)_",
+			sendingNotification: "⏳ Envoi en cours de la notification à %1 groupes...",
+			sentNotification: "✅ Notification envoyée avec succès à %1 groupes.",
+			errorSendingNotification: "❌ Une erreur est survenue lors de l'envoi à %1 groupes :\n%2"
 		}
 	},
 
 	onStart: async function ({ message, api, event, args, commandName, envCommands, threadsData, getLang }) {
 		const { delayPerGroup } = envCommands[commandName];
 		if (!args[0])
-			return message.reply(getLang("missingMessage"));
+			return message.reply(`╭─❍\n│ 🚨 ${getLang("missingMessage")}\n╰─━━━━━━━━━━━━━╾─◊`);
+
 		const formSend = {
-			body: `${getLang("notification")}\n────────────────\n${args.join(" ")}`,
+			body: `╭─❍\n│ 📢 **${getLang("notification")}**\n│────────────────\n│ ${args.join(" ")}\n╰─━━━━━━━━━━━━━╾─◊`,
 			attachment: await getStreamsFromAttachment(
 				[
 					...event.attachments,
@@ -53,7 +54,7 @@ module.exports = {
 		};
 
 		const allThreadID = (await threadsData.getAll()).filter(t => t.isGroup && t.members.find(m => m.userID == api.getCurrentUserID())?.inGroup);
-		message.reply(getLang("sendingNotification", allThreadID.length));
+		message.reply(`╭─❍\n│ ⏳ ${getLang("sendingNotification", allThreadID.length)}\n╰─━━━━━━━━━━━━━╾─◊`);
 
 		let sendSucces = 0;
 		const sendError = [];
@@ -90,11 +91,12 @@ module.exports = {
 			}
 		}
 
-		let msg = "";
+		let msg = "╭─❍\n";
 		if (sendSucces > 0)
-			msg += getLang("sentNotification", sendSucces) + "\n";
+			msg += `│ ✅ ${getLang("sentNotification", sendSucces)}\n`;
 		if (sendError.length > 0)
-			msg += getLang("errorSendingNotification", sendError.reduce((a, b) => a + b.threadIDs.length, 0), sendError.reduce((a, b) => a + `\n - ${b.errorDescription}\n  + ${b.threadIDs.join("\n  + ")}`, ""));
+			msg += `│ ❌ ${getLang("errorSendingNotification", sendError.reduce((a, b) => a + b.threadIDs.length, 0), sendError.reduce((a, b) => a + `\n│ - ${b.errorDescription}\n│   + ${b.threadIDs.join("\n│   + ")}`, ""))}\n`;
+		msg += "╰─━━━━━━━━━━━━━╾─◊";
 		message.reply(msg);
 	}
 };
